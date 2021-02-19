@@ -8,31 +8,28 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
       home: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.red,
-          title: Text("MyApp")),
-          body: GridView.count(
-            crossAxisCount:2,
-            children: <Widget> [
+        appBar: AppBar(title: Text("MyApp"), backgroundColor: Colors.red[600]),
+        body: Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
             Container(
-            color: Colors.white,
-            alignment: Alignment.center,
-            child: Text("BERITA TERBARU", style: TextStyle(fontSize:15, color: Colors.black)
-            ),
+              height: 50,
+              width: 200,
+              alignment: Alignment.center,
+              decoration: BoxDecoration(color: Colors.white, shape: BoxShape.rectangle),
+              child: new Text("BERITA TERBARU",
+                    style: new TextStyle(fontSize: 15, color: Colors.grey[600])),
             ),
             Container(
-            color: Colors.white,
-            alignment: Alignment.center,
-            child: Text("PERTANDINGAN HARI INI", style: TextStyle(fontSize:15, color: Colors.black)
-            ),
-            ),
-            SizedBox(
-                width: 5,
-            ),
-            ]
-        ),
+              height: 50,
+              width: 210,
+              alignment: Alignment.center,
+              decoration: BoxDecoration(color: Colors.white, shape: BoxShape.rectangle),
+              child: new Text("TRENDING HARI INI",
+                    style: new TextStyle(fontSize: 15, color: Colors.grey[600])),
+            )],
+        )
       ),
     );
   }
